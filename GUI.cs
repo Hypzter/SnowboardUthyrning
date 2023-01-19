@@ -53,13 +53,13 @@ namespace SnowboardUthyrning
                         Insert.HireSnowboard(weekNr);
                         break;
                     case ConsoleKey.N:
-                        if (weekNr < 8) {
+                        if (weekNr < 4) {
                             weekNr++;
                         }
                         else {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine();
-                            Console.WriteLine("This booking app cant go above 8 weeks.");
+                            Console.WriteLine("This booking app cant go above 4 weeks.");
                             Console.WriteLine("Press any key to continue");
                             Console.ReadKey();
                             Console.ResetColor();                 

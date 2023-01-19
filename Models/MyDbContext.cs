@@ -17,7 +17,7 @@ namespace SnowboardUthyrning.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=SnowboardUthyrning;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=tcp:demonyk.database.windows.net,1433;Initial Catalog=DbDemo;Persist Security Info=False;User ID=christoferadmin;Password=Bergshammar123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
     }

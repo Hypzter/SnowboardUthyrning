@@ -76,10 +76,10 @@ namespace SnowboardUthyrning.DatabaseData
                                  b.Week,
                              };
 
-                var amountOfSnowboards = db.Bookings.ToList().Count();
+                var amountOfSnowboards = db.Snowboards.ToList().Count();
                 var amountBooked = result.Where(x => x.Week == weekNr).Count();
                 
-                Console.WriteLine("Week " + weekNr + " there is " + amountBooked + " booked snowboards out of " + (amountOfSnowboards * 7));
+                Console.WriteLine("Week " + weekNr + " there is " + amountBooked + " booked days out of " + (amountOfSnowboards * 7) + " possible.");
             }
         }
     }
