@@ -1,6 +1,6 @@
 name: My first workflow
 
-on: workflow_dispatch
+on: push
 
 jobs: 
   my-amazing-job:
@@ -23,4 +23,5 @@ jobs:
         run: |
           ls -lah ${{ github.workspace }};
           echo "Contents of a nonexistent README"
+      - run: echo "This job's status is ${{ job.status }}"
         
