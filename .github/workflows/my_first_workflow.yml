@@ -12,4 +12,15 @@ jobs:
       - run: echo "Operating System ${{ runner.os }}"
       - run: echo "Branch ${{ github.ref }}"
       - run: echo "Repository ${{ github.repository }}"
-      
+  my-amazing-checkout-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Cloning ${{ github.repoistory }} to the runner..."
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.1
+      - run: echo "The repo has been cloned and is ready for... well... anything!"
+      - name: List files in repo
+        run: |
+          ls -lah ${{ github.workspace }};
+          echo "Contents of a nonexistent README"
+        
